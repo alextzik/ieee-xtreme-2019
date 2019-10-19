@@ -33,7 +33,7 @@ class Node:
 
 def insert(root, key):
 
-    Node = Node(key)
+    node = Node(key)
     x = root
     y = None
     height = 1
@@ -47,19 +47,13 @@ def insert(root, key):
         height += 1
 
     if (y == None):
-        y = Node
+        y = node
     elif (key <= y.key):
-        y.left = Node
+        y.left = node
     else:
-        y.right = Node
+        y.right = node
 
     return height
-
-class Node:
-    def __init__(self,key):
-        self.left = None
-        self.right = None
-        self.val = key
 
 
 n = get_number()
